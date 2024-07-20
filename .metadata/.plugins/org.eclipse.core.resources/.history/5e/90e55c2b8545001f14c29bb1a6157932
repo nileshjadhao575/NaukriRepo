@@ -1,0 +1,6 @@
+Feature: naukri page functionality
+
+Scenario: to check job functinality
+
+Given: when user is on home page
+When: user click job button

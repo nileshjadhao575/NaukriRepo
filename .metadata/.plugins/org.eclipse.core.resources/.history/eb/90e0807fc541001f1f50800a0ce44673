@@ -1,0 +1,39 @@
+package pageObjectModel;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class FbLogin {
+	
+	public WebDriver driver;
+	
+	public FbLogin(WebDriver driver ) {
+		PageFactory.initElements(driver, this);
+		this.driver = driver;
+	}
+	
+	@FindBy (id="email")
+	WebElement userid;
+	
+	@FindBy (id="pass")
+	WebElement password;
+	
+	@FindBy (id="loginbutton")
+	WebElement bt;
+	
+	
+	public void username() {
+		userid.sendKeys("nilesh@gmail.com");
+	}
+	
+	public void password() {
+		password.sendKeys("12345");
+	}
+	
+	public void loginBT() {
+		bt.click();
+	}
+
+}

@@ -1,0 +1,14 @@
+package hrmRunner;
+
+import io.cucumber.junit.CucumberOptions;
+
+public class HRMrunner {
+	
+	@RunWith(Cucumber.class)
+	@CucumberOptions( features="F:\\new1\\DemoHRM\\src\\main\\java\\HRMfeature\\loginHRM.feature",
+	                  glue="stepDefination",
+	                  plugin = {"preety","html:target/report.html",}
+			)
+	
+
+}
